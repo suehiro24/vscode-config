@@ -1,0 +1,134 @@
+[
+  /**
+   * Terminal
+   */
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.newInActiveWorkspace",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  { "key": "ctrl+shift+enter", "command": "workbench.action.terminal.focus" },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
+  },
+
+  /**
+   * Editor
+   */
+  {
+    "key": "shift+space",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+shift+z ctrl+shift+z",
+    "command": "leetcode.testSolution",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+a ctrl+shift+a",
+    "command": "leetcode.showSolution",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+s ctrl+shift+s",
+    "command": "leetcode.submitSolution",
+    "when": "editorTextFocus"
+  },
+  // For Linux (編集対象のファイルの分割)
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.moveEditorToPreviousGroup",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.moveEditorToNextGroup",
+    "when": "editorFocus"
+  },
+
+  /**
+   * Others
+   */
+  // VSCodeを閉じる
+  { "key": "ctrl+shift+alt+w", "command": "workbench.action.closeWindow" },
+  { "key": "ctrl+shift+w", "command": "-workbench.action.closeWindow" }, // デフォルト設定削除
+  // ファイル検索時のピッカー内移動
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  // ファイル移動時のピッカー内移動
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+alt+[Minus]",
+    "command": "-workbench.action.navigateBack"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "ctrl+shift+[IntlRo]",
+    "command": "-workbench.action.navigateForward"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p",
+    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  }
+]
