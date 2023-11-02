@@ -1,0 +1,229 @@
+{
+  // Ignore sync settings
+  "settingsSync.ignoredSettings": [
+    // "editor.fontSize",
+    // "terminal.integrated.fontSize",
+    "editor.fontFamily"
+  ],
+  "editor.fontSize": 10.7,
+  "terminal.integrated.fontSize": 12,
+  /**
+   * Window
+   */
+  "window.titleBarStyle": "custom",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook",
+    "*.pdf": "default"
+  },
+  "editor.suggestSelection": "first",
+  "editor.inlineSuggest.enabled": true,
+  // Formatter
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Linter
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  /**
+   * Files
+   */
+  "files.autoSave": "onWindowChange",
+  "files.exclude": {
+    // "**/__pycache__": true,
+    // "**/.classpath": false
+  },
+  /**
+   * Exploler
+   */
+  "explorer.autoReveal": false,
+  /**
+   * Terminal
+   */
+  "terminal.integrated.defaultProfile.linux": "Bash",
+  "terminal.integrated.profiles.linux": {
+    "Bash": {
+      "path": ["/bin/bash"],
+      "args": ["-l"],
+      "icon": "terminal"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "path": ["${env:windir}\\System32\\cmd.exe"],
+      "args": ["/k", "C:\\env.cmd"],
+      "icon": "terminal-cmd"
+    },
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    }
+  },
+  /**
+   * Git
+   */
+  "git.autofetch": true,
+  "git.autoRepositoryDetection": true,
+  "git.detectSubmodules": true,
+  "git.ignoreLegacyWarning": false,
+  "git.suggestSmartCommit": false,
+  /**
+   * GitLens
+   */
+  "gitlens.gitCommands.skipConfirmations": ["fetch:command", "switch:command"],
+  /**
+   * Vim
+   */
+  "vim.statusBarColorControl": false, //statusbarの色のコントロールをしない
+  "vim.highlightedyank.enable": true, //yankした箇所をハイライト表示にする
+  "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)", //yankした時の色
+  "vim.highlightedyank.duration": 150, //yankした時の色の表示時間
+  "vim.leader": "<space>", // Map Leaderの設定
+  "vim.autoindent": true, // autoindent
+  "vim.useSystemClipboard": true, // system clipboardと同期する
+  "vim.hlsearch": true, // hlserch
+  "vim.visualstar": true, // カーソル上にあるワードを"*"で検索
+  "vim.useCtrlKeys": true, // 諸々のctrlキーを使った操作を有効化
+  "vim.debug.silent": true, // アラートを出さない
+  "vim.easymotion": true, // easymotionを有効化
+  "vim.surround": true, // surroundを有効化
+  "vim.ignorecase": true, // 検索/置換時の大文字小文字を区別しない
+  "vim.handleKeys": {
+    "<C-w>": false, // VSCodeのkeyBindingを適用(ファイルを閉じる)
+    "<C-k>": false // VSCodeのkeyBindingを適用(shortcut leader)
+  },
+  "vim.insertModeKeyBindings": [
+    // いつもの
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // delete, paste時にyankしない
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "_", "d", "P"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // delete, paste時にyankしない
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "_", "d"]
+    },
+    // vscodeのundo, redoをvimから動かす
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    }
+  ],
+  /**
+   * LeetCode
+   */
+  "leetcode.workspaceFolder": "/home/suehiro24/apps/leetcode/js",
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.hint.commandShortcut": false,
+  /**
+   * VS Icon
+   */
+  "vsicons.dontShowNewVersionMessage": true,
+  /**
+   * C, C++
+   */
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google }",
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.default.includePath": [
+    "/usr/include/c++/10",
+    "/usr/include/x86_64-linux-gnu/c++/10",
+    "/usr/include/c++/11",
+    "/usr/include/x86_64-linux-gnu/c++/11"
+  ],
+  /**
+   * JavaScript & TypeScript
+   */
+  // "javascript.format.enable": false,
+  // "typescript.format.enable": false,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  /**
+   * PHP
+   */
+  "[php]": {
+    "editor.defaultFormatter": null
+  },
+  "laravel-pint.enable": true,
+  "intelephense.format.enable": false,
+  /**
+   * Go
+   */
+  "go.toolsManagement.autoUpdate": true,
+  /**
+   * Dart (Flutter)
+   */
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  /**
+   * Rust
+   */
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    // "editor.defaultFormatter": "rust-lang.rust",
+    "editor.formatOnSave": true
+  },
+  /**
+   * Prisma
+   */
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  },
+  /**
+   * Jupyter-notebook
+   */
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  /**
+   * Draw.io
+   */
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.theme": "Kennedy",
+  "hediet.vscode-drawio.codeLinkActivated": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "dev.containers.defaultExtensions": [
+    "github.copilot",
+    "github.copilot-chat",
+    "github.copilot-labs"
+  ]
+}
